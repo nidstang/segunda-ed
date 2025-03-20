@@ -4,10 +4,11 @@
       "default": {
         "$type": "typography",
         "$value": {
-          "fontFamily": "{fontFamily.primary}",
-          "fontWeight": "{fontWeight.medium}",
+          "fontFamily": "{fontFamily.tertiary}",
+          "fontWeight": "{fontWeight.semibold}",
           "fontSize": "{fontSize.100}",
-          "lineHeight": "{lineHeight.small}"
+          "lineHeight": "{lineHeight.small}",
+          "textCase": "{textCase.uppercase}"
         }
       }
     }

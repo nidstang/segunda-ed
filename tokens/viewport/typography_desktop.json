@@ -30,6 +30,16 @@
           "fontSize": "{fontSize.600}",
           "letterSpacing": "{letterSpacing.contracted}"
         }
+      },
+      "prueba": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{fontFamily.primary}",
+          "fontWeight": "{fontWeight.semibold}",
+          "fontSize": "{fontSize.1000}",
+          "lineHeight": "{lineHeight.small}",
+          "letterSpacing": "{letterSpacing.contracted}"
+        }
       }
     },
     "body": {

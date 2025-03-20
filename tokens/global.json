@@ -12,9 +12,9 @@
       "$type": "dimension",
       "$value": "4"
     },
-    "x200": {
+    "x250": {
       "$type": "dimension",
-      "$value": "{dimension.x100} * 2"
+      "$value": "{dimension.x100} * 2.5"
     },
     "x300": {
       "$type": "dimension",
@@ -146,11 +146,15 @@
   "fontFamily": {
     "primary": {
       "$type": "fontFamilies",
-      "$value": "Space Grotesk"
+      "$value": "Inter"
     },
     "secondary": {
       "$type": "fontFamilies",
-      "$value": "Outfit"
+      "$value": "Fragment Mono"
+    },
+    "tertiary": {
+      "$type": "fontFamilies",
+      "$value": "Azeret Mono"
     }
   },
   "lineHeight": {
@@ -262,7 +266,7 @@
     },
     "contracted": {
       "$type": "letterSpacing",
-      "$value": "- {dimension.x050}"
+      "$value": "2%"
     }
   },
   "textCase": {

@@ -124,5 +124,15 @@
         }
       }
     }
+  },
+  "paddings": {
+    "card": {
+      "$type": "sizing",
+      "$value": "{dimension.x400}, {dimension.x300} , {dimension.x400}, {dimension.x300}"
+    }
+  },
+  "hhshs": {
+    "$type": "spacing",
+    "$value": "{dimension.x400}, {dimension.x300} , {dimension.x400}, {dimension.x300}"
   }
 }
