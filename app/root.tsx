@@ -40,6 +40,7 @@ export function Layout ({ actionData = { theme : 'light '} } : Route.ComponentPr
     const data = useActionData();
     const submit = useSubmit();
     const handleChangeTheme = () => {
+      console.log('eooo');
         if (data?.theme === 'dark') {
             return submit({ theme: 'light' }, { method: 'post', action: '/' } );
         }
