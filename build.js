@@ -12,8 +12,12 @@ async function run() {
     const themes = await loader.load('/tokens');
 
     const globalTheme = themes.getThemeByName('global');
+    const lightTheme = themes.getThemeByName('light');
 
-    const config = {
+    const globalConfig = {
+        expand: {
+            typesMap: true,
+        },
         platforms: {
             web: {
                 files: [
@@ -26,13 +30,36 @@ async function run() {
                 transforms: [
                     'name/kebab',
                     'ts/resolveMath',
+                    'ts/typography/fontWeight',
+                    'ts/size/lineheight',
                     'size/pxToRem'
                 ]
             }
         }
     };
 
-    globalTheme.addConfig(config).build();
+    // app/build/light/variables.css
+
+    const lightConfig = {
+        platforms: {
+            web: {
+                files: [
+                    {
+                        destination: 'app/build/light/variables.css',
+                        format: 'css/variables',
+                    }
+                ],
+
+                transforms: [
+                    'name/kebab',
+                    'color/rgb'
+                ]
+            }
+        }
+    };
+
+    globalTheme.addConfig(globalConfig).build();
+    lightTheme.addConfig(lightConfig).build();
 
 }
 
