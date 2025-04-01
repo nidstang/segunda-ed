@@ -13,6 +13,7 @@ async function run() {
 
     const globalTheme = themes.getThemeByName('global');
     const lightTheme = themes.getThemeByName('light');
+    const darkTheme = themes.getThemeByName('dark');
 
     const globalConfig = {
         expand: {
@@ -38,8 +39,6 @@ async function run() {
         }
     };
 
-    // app/build/light/variables.css
-
     const lightConfig = {
         platforms: {
             web: {
@@ -58,8 +57,27 @@ async function run() {
         }
     };
 
+    const darkConfig = {
+        platforms: {
+            web: {
+                files: [
+                    {
+                        destination: 'app/build/dark/variables.css',
+                        format: 'css/variables',
+                    }
+                ],
+
+                transforms: [
+                    'name/kebab',
+                    'color/rgb'
+                ]
+            }
+        }
+    };
+
     globalTheme.addConfig(globalConfig).build();
     lightTheme.addConfig(lightConfig).build();
+    darkTheme.addConfig(darkConfig).build();
 
 }
 
