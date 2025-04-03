@@ -23,6 +23,7 @@ async function run() {
     const darkTheme = themes.getThemeByName('dark');
     const desktopTheme = themes.getThemeByName('desktop');
     const mobileTheme = themes.getThemeByName('mobile');
+    const copiesTheme = themes.getThemesByGroup('copies');
 
     const globalConfig = {
         expand: {
@@ -141,15 +142,27 @@ async function run() {
                 ]
             }
         }
-
-
     };
+
+    const copiesConfig = theme => ({
+        platforms: {
+			copies: {
+				files: [
+					{
+						destination: `app/build/${theme.name.toLowerCase()}/texts.json`,
+						format: "json/nested",
+					},
+				],
+			},
+		},
+    });
 
     globalTheme.addConfig(globalConfig).build();
     lightTheme.addConfig(lightConfig).build();
     darkTheme.addConfig(darkConfig).build();
     desktopTheme.addConfig(desktopConfig).build();
     mobileTheme.addConfig(mobileConfig).build();
+    copiesTheme.addConfig(copiesConfig).build();
 
 }
 
